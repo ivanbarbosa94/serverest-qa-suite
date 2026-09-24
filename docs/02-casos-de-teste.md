@@ -74,8 +74,8 @@ Legenda — **Prio:** A = Alta, M = Média, B = Baixa · **Auto:** arquivo que a
 | RF-01 | CT-API-010 a 013 · CT-UI-001 a 004 |
 | RF-02 | CT-API-001 a 004 · CT-UI-005, 006, 008 |
 | RF-03 | CT-API-005 a 009 · CT-MAN-002 |
-| RF-04 | CT-API-014, 015, 018 a 022 · CT-MAN-001, 003 |
-| RF-05 | CT-API-023, 027, 029 |
+| RF-04 | CT-API-014 a 022 · CT-MAN-001, 003 |
+| RF-05 | CT-API-023 a 029 |
 | RN-01 | CT-API-002 · CT-UI-007 |
 | RN-02 | CT-API-017 |
 | RN-03 | CT-API-015 |
