@@ -7,7 +7,7 @@ Projeto de QA end-to-end para a aplicação **ServeRest** (loja virtual criada p
 | **Aplicação sob teste** | Front: https://front.serverest.dev · API: https://serverest.dev |
 | **Stack** | Cypress 13 · JavaScript · Mochawesome · GitHub Actions |
 | **Padrões** | Page Object · Custom Commands · Data Factories · testes independentes com limpeza de dados |
-| **Cobertura** | 29 casos de API + 8 de UI automatizados + 5 manuais/exploratórios |
+| **Cobertura** | 29 casos de API + 8 de UI documentados · 41 execuções automatizadas · 5 manuais/exploratórios |
 
 ## Por que este projeto
 
@@ -62,15 +62,32 @@ CYPRESS_apiUrl=http://localhost:3000 npm run test:api
 - **Seletores estáveis:** `data-testid`, centralizados em Page Objects.
 - **Evidências:** screenshots em falha e relatório HTML anexados a cada execução do CI.
 
-## Premissas a validar na primeira execução
+## Resultado da execução
 
-Este projeto foi escrito a partir da documentação pública do ServeRest, e os testes ainda precisam de um primeiro ciclo de execução real. Confirme:
+A suíte foi executada localmente com sucesso em modo headless.
 
-1. Seletores `data-testid` e textos de validação da UI (DevTools ou `cy:open`).
-2. Regras de limite de `preco` e `quantidade` conforme o Swagger do ServeRest.
-3. Mensagens exatas de erro da API (asserções de `message`).
+- **Specs executadas:** 6
+- **Testes automatizados:** 41
+- **Testes aprovados:** 41
+- **Testes reprovados:** 0
+- **Testes pendentes:** 0
+- **Execuções de API:** 33
+- **Execuções de UI:** 8
+- **Tempo total:** 58 segundos
+- **Cypress:** 13.17.0
+- **Node.js:** 24.18.0
+- **Browser:** Electron 118 (headless)
 
-Divergências encontradas devem ser tratadas como qualquer defeito: analisar se o problema é do teste ou da aplicação e, se for da aplicação, registrar com `docs/03-modelo-bug-report.md`.
+### Detalhamento da cobertura
+
+Os **29 casos de API documentados** resultam em **33 execuções automatizadas**, devido à utilização de cenários parametrizados:
+
+- **CT-API-003:** 3 variações para validação de e-mail inválido.
+- **CT-API-018:** 3 variações para validação de preço inválido.
+
+A suíte possui **41 execuções automatizadas no total**, sendo 33 de API e 8 de UI.
+
+Os **5 cenários manuais/exploratórios** permanecem documentados separadamente e não fazem parte da execução automatizada.
 
 ## Próximos passos
 
